@@ -3,9 +3,9 @@ package com.volkosky.spring.sfgdi.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class PropertyInjectedGreetngService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello Swiat";
+        return "Hello Swiat - Property";
     }
 }
