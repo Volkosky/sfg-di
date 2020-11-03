@@ -1,9 +1,6 @@
 package com.volkosky.spring.sfgdi;
 
-import com.volkosky.spring.sfgdi.controllers.ConstructorInjectedController;
-import com.volkosky.spring.sfgdi.controllers.MyController;
-import com.volkosky.spring.sfgdi.controllers.PropertyInjectedController;
-import com.volkosky.spring.sfgdi.controllers.SetterBasedController;
+import com.volkosky.spring.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -30,6 +27,9 @@ public class SfgDiApplication {
 		System.out.println("------------ Constructor");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 	}
 
 }
